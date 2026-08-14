@@ -1,0 +1,21 @@
+--[[
+	Mumuskeh   - Unregister all important callbacks later, gated by gamemode.
+			   - Revert gameplay_disguise.expose_actor, gated by gamemode.
+			   - Date: 13.08.2026
+			   - Credits: RavenAscendant, Igigog.
+--]]
+
+
+function on_loading_screen_key_prompt()
+	if (IsWarfare() or IsSurvivalMode()) == true then
+		gameplay_disguise.expose_actor = x_neutral_zone.mumu_nzp_saved_expose_actor
+		UnregisterScriptCallback("on_option_change", z_neutral_zone.on_option_change)
+		UnregisterScriptCallback("npc_on_before_hit", z_neutral_zone.npc_on_before_hit)
+		UnregisterScriptCallback("on_enemy_eval", z_neutral_zone.on_enemy_eval)
+		UnregisterScriptCallback("actor_on_update", z_neutral_zone.actor_on_update)
+	end
+end
+
+function on_game_start()
+	RegisterScriptCallback("on_loading_screen_key_prompt", on_loading_screen_key_prompt)
+end
