@@ -16,7 +16,7 @@ function on_xml_read()
                 -- Inject the complete expanded profile from our custom XML file.
                 -- Setting 'useRootNode' to true ensures only the phrases are inserted.
                 -- xml_obj:insertFromXMLFile([[plugins\starcry_lottery_expanded.xml]], phrase_list_el, nil, true)
-            -- end
+            end
         end
     end)
 end

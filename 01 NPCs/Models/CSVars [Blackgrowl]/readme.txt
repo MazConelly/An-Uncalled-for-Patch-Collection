@@ -6,6 +6,9 @@ https://www.moddb.com/mods/stalker-anomaly/addons/csvars
 -Compatibility:
 NOTE: You still need the original mod. Disable the configs/gameplay folder.
 
+I'd recommend just using instead my Player Outfit Addon, which includes these fixes and more:
+https://www.moddb.com/mods/stalker-anomaly/addons/csvars-player-outfits-addon
+
 ----------------------------------------------------------
 -Explanation:
 DXML conversion for better compatibility.

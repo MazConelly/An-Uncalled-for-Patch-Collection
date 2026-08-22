@@ -4,8 +4,10 @@
 ; to create zone medicinal items.
 
 ;--=====================================================================
-[hsurv_bandage]:bandage
+[hsurv_bandage]:booster
 $spawn					= "food and drugs\hsurv_bandage"
+visual					= dynamics\devices\dev_bandage\dev_bandage.ogf
+kind					= i_medical
 description				= st_hsurv_bandage_descr
 cost					= 680
 inv_name				= st_hsurv_bandage
@@ -16,16 +18,25 @@ inv_grid_width			= 1
 inv_grid_height			= 1
 inv_grid_x				= 1
 inv_grid_y				= 3
+upgr_icon_path			= ui\actor_items\ui_actor_items_2
+upgr_icon_x				= 0
+upgr_icon_y				= 0
+upgr_icon_width			= 150
+upgr_icon_height		= 50
 boost_time				= 15 ;5
 boost_bleeding_restore	= 0.004
 eat_satiety				= -0.011
 eat_alcohol				= 0.009
 eat_sleepiness			= 0.006
+use_sound				= interface\inv_bandage_3p7
+tier					= 1
 
 ;--=====================================================================
 ; light zone heal
-[hsurv_medkit_light]:medkit
+[hsurv_medkit_light]:booster_multi
 $spawn					= "food and drugs\hsurv_medkit_light"
+visual					= dynamics\devices\dev_aptechka\dev_aptechka_low.ogf
+kind					= i_medical
 description				= st_hsurv_medkit_light_descr
 cost					= 1000 ; 1500
 inv_name				= st_hsurv_medkit_light
@@ -36,64 +47,139 @@ inv_grid_width			= 1
 inv_grid_height			= 1
 inv_grid_x				= 2
 inv_grid_y				= 3
+upgr_icon_path			= ui\actor_items\ui_actor_items_2
+upgr_icon_x				= 0
+upgr_icon_y				= 50
+upgr_icon_width			= 150
+upgr_icon_height		= 100
 boost_time				= 60
 boost_health_restore	= 0.00095
 boost_radiation_restore	= 0
 eat_thirstiness			= 0.05
+use_sound				= interface\inv_medkit
+use_condition			= true
+script_binding			= bind_item.bind
 max_uses				= 1
+remove_after_use		= true
+empty_weight			= 0.1
+;hide_time_wpn			= 4
+tier					= 2
 
 ; medium zone heal
-[hsurv_medkit_medium]:hsurv_medkit_light
+[hsurv_medkit_medium]:booster_multi
 $spawn					= "food and drugs\hsurv_medkit_medium"
+visual					= dynamics\devices\dev_aptechka\dev_aptechka_low.ogf
+kind					= i_medical
 description				= st_hsurv_medkit_med_descr
 cost					= 1500 ; 2500
 inv_name				= st_hsurv_medkit_med
 inv_name_short			= st_hsurv_medkit_med
 inv_weight				= 0.65 ; 0.5
+icons_texture			= ui\ui_hsurv
 inv_grid_width			= 1
 inv_grid_height			= 1
 inv_grid_x				= 3
 inv_grid_y				= 3
+upgr_icon_path			= ui\actor_items\ui_actor_items_2
+upgr_icon_x				= 0
+upgr_icon_y				= 50
+upgr_icon_width			= 150
+upgr_icon_height		= 100
+boost_time				= 60
 boost_health_restore	= 0.0019
+boost_radiation_restore	= 0
+eat_thirstiness			= 0.05
+use_sound				= interface\inv_medkit
+use_condition			= true
+script_binding			= bind_item.bind
+max_uses				= 1
+remove_after_use		= true
+empty_weight			= 0.1
+;hide_time_wpn			= 4
+tier					= 2
 
 ; heavy zone heal
-[hsurv_medkit_heavy]:hsurv_medkit_light
+[hsurv_medkit_heavy]:booster_multi
 $spawn					= "food and drugs\hsurv_medkit_heavy"
+visual					= dynamics\devices\dev_aptechka\dev_aptechka_low.ogf
+kind					= i_medical
 description				= st_hsurv_medkit_heavy_descr
 cost					= 2000 ; 10500
 inv_name				= st_hsurv_medkit_heavy
 inv_name_short			= st_hsurv_medkit_heavy
 inv_weight				= 0.8 ; 0.5
+icons_texture			= ui\ui_hsurv
 inv_grid_width			= 1
 inv_grid_height			= 1
 inv_grid_x				= 4
 inv_grid_y				= 3
+upgr_icon_path			= ui\actor_items\ui_actor_items_2
+upgr_icon_x				= 0
+upgr_icon_y				= 50
+upgr_icon_width			= 150
+upgr_icon_height		= 100
+boost_time				= 60
 boost_health_restore	= 0.0045
+boost_radiation_restore	= 0
+eat_thirstiness			= 0.05
+use_sound				= interface\inv_medkit
+use_condition			= true
+script_binding			= bind_item.bind
+max_uses				= 1
+remove_after_use		= true
+empty_weight			= 0.1
+;hide_time_wpn			= 4
+tier					= 2
 
-[hsurv_stimpack]:stimpack
+[hsurv_stimpack]:booster
 $spawn					= "food and drugs\hsurv_stimpack"
+visual					= dynamics\equipments\medical\stim1.ogf
+kind					= i_medical
 description				= st_hsurv_stim_descr
 cost					= 1500 ; 3000
 inv_name				= st_hsurv_stim
 inv_name_short			= st_hsurv_stim
 inv_weight				= 0.15 ; 0.1
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 6
+inv_grid_y				= 66
+upgr_icon_path			= ui\actor_items\ui_actor_items_2
+upgr_icon_x				= 0
+upgr_icon_y				= 350
+upgr_icon_width			= 150
+upgr_icon_height		= 150
 boost_time				= 15
 boost_health_restore	= 0.005
 eat_alcohol				= 0.036
 eat_satiety				= -0.194
 eat_sleepiness			= 0.064
 eat_thirstiness			= 0.11
-tier					= 2
+use_sound				= interface\inv_stim_4p3
+tier					= 1
 
 ;--=====================================================================
 ; bleed resist needle
-[hsurv_morphine]:morphine
+[hsurv_morphine]:booster
 $spawn						= "food and drugs\hsurv_morphine"
+visual						= dynamics\equipments\medical\rebirth.ogf
+kind						= i_medical
 description					= st_hsurv_morphine_descr
 cost						= 980
 inv_name					= st_hsurv_morphine
 inv_name_short				= st_hsurv_morphine
 inv_weight					= 0.076
+inv_grid_width				= 1
+inv_grid_height				= 1
+inv_grid_x					= 14
+inv_grid_y					= 66
+attach_angle_offset			= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name			= bip01_r_hand
+auto_attach					= false
+bone_name					= bip01_r_hand
+position_offset			 	= 0.0,0.0,0.0
+angle_offset			 	= 1.570790,1.570790,3.92699
 boost_time					= 1152
 boost_bleeding_restore		= 0.00082
 boost_wound_immunity		= 0.245
@@ -105,4 +191,5 @@ eat_satiety					= -0.09
 eat_sleepiness				= 0.05
 eat_thirstiness				= 0.05
 eat_health					= 0.045
+use_sound					= interface\inv_syringe
 tier						= 4

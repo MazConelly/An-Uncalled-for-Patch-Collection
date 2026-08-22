@@ -69,6 +69,9 @@ After using a medkit, you'll receive a spare empty syringe. This affects both th
 In addition to the medkits, now the improvised morphine and stimpacks also provides a syringe.
 Do not use with the More drops from drugs patch below, as its redundant.
 
+No drug limit
+Merges the changes in itms_manager.script with those in nb79's mod, removing the 'there is a greater effect in place' restriction. nb79's No drug limit is not needed with this and you may disable it.
+
 Unique NPC Loot - MAS
 Merges changes from both mods to itms_manager.script
 

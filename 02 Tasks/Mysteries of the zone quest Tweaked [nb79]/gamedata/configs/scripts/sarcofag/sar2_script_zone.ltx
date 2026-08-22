@@ -1,0 +1,44 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_info = {+warlab_actor_teleported_to_sar2} sr_idle@inside 
+
+[sr_idle@inside]
+on_info = sr_idle %=stop_postprocess(3009) +sar2_actor_in_monolith_room%
+
+[sr_idle]
+;on_actor_outside = sr_idle@1 %+sar2_teleport_start%
+on_actor_outside = sr_idle@2ndwave %+sar2_teleport_start +sar2_spawn_1 +sar2_spawn_2 +sar2_spawn_3 +sar2_spawn_4 %
+
+[sr_idle@2ndwave]
+on_info = {+sar2_death_1 +sar2_death_2 +sar2_death_3 +sar2_death_4 } sr_idle@3rdwave %+sar2_spawn_7 +sar2_spawn_8 +sar2_spawn_9 +sar2_spawn_10 %
+
+[sr_idle@3rdwave]
+on_info = {+sar2_death_7 +sar2_death_8 +sar2_death_9 +sar2_death_10} sr_idle@4thwave %+sar2_spawn_13 +sar2_spawn_14 +sar2_spawn_15 +sar2_spawn_16%
+
+[sr_idle@4thwave]
+on_info = {+sar2_death_13 +sar2_death_14 +sar2_death_15 +sar2_death_16} sr_idle@5thwave %+sar2_spawn_19 +sar2_spawn_20 +sar2_spawn_21 +sar2_spawn_22%
+
+[sr_idle@5thwave]
+on_info = {+sar2_death_19 +sar2_death_20 +sar2_death_21 +sar2_death_22} sr_idle@6thwave %+sar2_spawn_25 +sar2_spawn_26 +sar2_spawn_27 +sar2_spawn_28%
+
+[sr_idle@6thwave]
+on_info = {+sar2_death_25 +sar2_death_26 +sar2_death_27 +sar2_death_28} sr_idle@7thwave %+sar2_spawn_31 +sar2_spawn_32 +sar2_spawn_33 +sar2_spawn_34%
+
+[sr_idle@7thwave]
+on_info = {+sar2_death_31 +sar2_death_32 +sar2_death_33 +sar2_death_34} sr_idle@8thwave %+sar2_spawn_37 +sar2_spawn_38 +sar2_spawn_39 +sar2_spawn_40%
+
+[sr_idle@8thwave]
+on_info = {+sar2_death_37 +sar2_death_38 +sar2_death_39 +sar2_death_40} sr_idle@9thwave %+sar2_spawn_43 +sar2_spawn_44 +sar2_spawn_45 +sar2_spawn_46 %
+
+[sr_idle@9thwave]
+on_info = {+sar2_death_43 +sar2_death_44 +sar2_death_45 +sar2_death_46 } sr_idle@10thwave %+sar2_spawn_49 +sar2_spawn_50 +sar2_spawn_51 +sar2_spawn_52%
+
+[sr_idle@10thwave]
+on_info = {+sar2_death_49 +sar2_death_50 +sar2_death_51 +sar2_death_52 } sr_idle@end %+sar2_spawn_55 +sar2_spawn_56 +sar2_spawn_57 +sar2_spawn_58 %
+
+[sr_idle@end]
+on_info = {+sar2_death_55 +sar2_death_56 +sar2_death_57 +sar2_death_58 } sr_idle@nil %+sar2_monolith_end%
+
+[sr_idle@nil]

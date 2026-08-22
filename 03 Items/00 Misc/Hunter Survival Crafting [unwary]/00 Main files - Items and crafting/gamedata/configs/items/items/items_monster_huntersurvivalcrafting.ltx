@@ -2,19 +2,46 @@
 
 
 ;--------------------------------------------------- Cured Flesh---------------------------------------------------
-[hide_flesh2]:hide_flesh
-visual					= dynamics\repair\hide_flesh2.ogf
-description				= st_hide_flesh2_descr
-inv_name				= st_hide_flesh2_name
-inv_name_short			= st_hide_flesh2_name
-inv_weight				= 1.1
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 10
-inv_grid_y				= 0
-cost					= 5640
-bleeding_restore_speed	= 0.00009
-hit_absorbation_sect	= hide_flesh2_absorbation
-repair_part_bonus		= 0.20
+[hide_flesh2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_flesh2.ogf
+description						= st_hide_flesh2_descr
+inv_name						= st_hide_flesh2_name
+inv_name_short					= st_hide_flesh2_name
+inv_weight						= 1.1
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 10
+inv_grid_y						= 0
+cost							= 5640
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740	
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;скорости увеличения (ум		еньшения)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00009 ; 0.00014
+hit_absorbation_sect			= hide_flesh2_absorbation
+additional_inventory_weight		= 0.343
+additional_inventory_weight2	= 0.343
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.20
+tier							= 1
 
 [hide_flesh2_absorbation]:hide_flesh_absorbation
 burn_immunity			= 0.00070
@@ -26,20 +53,45 @@ explosion_immunity		= 0.011 ; 0.5 sheet of kevlar
 fire_wound_immunity		= 0.030 ; 0.5 sheet of kevlar
 
 ; -----------------------------------------------------Cured Flesh Pelt--------------------------------------------------------
-[hide_flesh3]:hide_flesh2
-visual					= dynamics\repair\hide_flesh3.ogf
-description				= st_hide_flesh3_descr
-inv_name				= st_hide_flesh3_name
-inv_name_short			= st_hide_flesh3_name
-inv_weight				= 1.3
-inv_grid_x				= 10
-inv_grid_y				= 1
-cost					= 10640
-bleeding_restore_speed	= 0.00018
-hit_absorbation_sect	= hide_flesh3_absorbation
+[hide_flesh3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_flesh3.ogf
+description						= st_hide_flesh3_descr
+inv_name						= st_hide_flesh3_name
+inv_name_short					= st_hide_flesh3_name
+inv_weight						= 1.3
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 10
+inv_grid_y						= 1
+cost							= 10640
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740	
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00018
+hit_absorbation_sect			= hide_flesh3_absorbation
 additional_inventory_weight		= 0.543
 additional_inventory_weight2	= 0.543
-repair_part_bonus		= 0.25
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.25
+tier							= 1
 
 [hide_flesh3_absorbation]:hide_flesh2_absorbation
 burn_immunity			= 0.00100
@@ -51,18 +103,45 @@ explosion_immunity		= 0.015 ; 0.5 sheet of kevlar
 fire_wound_immunity		= 0.048 ; 0.5 sheet of kevlar
 
 ; ------------------------------------------Hardened Flesh Pelt, the final upgrade-----------------------------------------
-[hide_flesh4]:hide_flesh3
-visual					= dynamics\repair\hide_flesh4.ogf
-description				= st_hide_flesh4_descr
-inv_name				= st_hide_flesh4_name
-inv_name_short			= st_hide_flesh4_name
-inv_weight				= 2.3
-inv_grid_x				= 10
-inv_grid_y				= 2
-cost					= 90640
-bleeding_restore_speed	= 0.0009 ; 0.00014
-hit_absorbation_sect	= hide_flesh4_absorbation
-repair_part_bonus		= 0.55
+[hide_flesh4]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_flesh4.ogf
+description						= st_hide_flesh4_descr
+inv_name						= st_hide_flesh4_name
+inv_name_short					= st_hide_flesh4_name
+inv_weight						= 2.3
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 10
+inv_grid_y						= 2
+cost							= 90640
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.0009 ; 0.00014
+hit_absorbation_sect			= hide_flesh4_absorbation
+additional_inventory_weight		= 0.543
+additional_inventory_weight2	= 0.543
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.55
+tier							= 1
 
 [hide_flesh4_absorbation]:hide_flesh3_absorbation
 burn_immunity			= 0.00220
@@ -75,22 +154,46 @@ explosion_immunity		= 0.197 ; 0.5 sheet of kevlar
 fire_wound_immunity		= 0.165 ; 0.5 sheet of kevlar
 
 ;----------------------------------------------- Cured boar hide---------------------------------------------------
-[hide_boar2]:hide_boar
-visual					= dynamics\repair\hide_boar2.ogf
-description				= st_hide_boar2_descr
-inv_name				= st_hide_boar2_name
-inv_name_short			= st_hide_boar2_name
-inv_weight				= 1.352
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 9
-inv_grid_y				= 0
-cost					= 2730 ; 6200
-bleeding_restore_speed	= 0.000018
-hit_absorbation_sect	= hide_boar2_absorbation
-
+[hide_boar2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_boar2.ogf
+description						= st_hide_boar2_descr
+inv_name						= st_hide_boar2_name
+inv_name_short					= st_hide_boar2_name
+inv_weight						= 1.352
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 9
+inv_grid_y						= 0
+cost							= 2730 ; 6200
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740	
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.000018
+hit_absorbation_sect			= hide_boar2_absorbation
 additional_inventory_weight		= 0.861
 additional_inventory_weight2	= 0.861
-repair_part_bonus		= 0.20
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.20
+tier							= 2
 
 [hide_boar2_absorbation]:hide_boar_absorbation
 burn_immunity			= 0.00080
@@ -102,20 +205,46 @@ explosion_immunity		= 0.014 ; 0.5 sheet of kevlar
 fire_wound_immunity		= 0.038 ; 0.5 sheet of kevlar
 
 ;----------------------------------------------------------Cured Boar pelt---------------------------------------------------------
-[hide_boar3]:hide_boar2
-visual					= dynamics\repair\hide_boar3.ogf
-description				= st_hide_boar3_descr
-inv_name				= st_hide_boar3_name
-inv_name_short			= st_hide_boar3_name
-inv_weight				= 1.752
-inv_grid_x				= 9
-inv_grid_y				= 1
-cost					= 12730
-bleeding_restore_speed	= 0.00024 ; 0.00065
-hit_absorbation_sect	= hide_boar3_absorbation
-
+[hide_boar3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_boar3.ogf
+description						= st_hide_boar3_descr
+inv_name						= st_hide_boar3_name
+inv_name_short					= st_hide_boar3_name
+inv_weight						= 1.752
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 9
+inv_grid_y						= 1
+cost							= 12730
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00024 ; 0.00065
+hit_absorbation_sect			= hide_boar3_absorbation
 additional_inventory_weight		= 0.961
 additional_inventory_weight2	= 0.961
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.20
+tier							= 2
 
 [hide_boar3_absorbation]:hide_boar2_absorbation
 burn_immunity			= 0.00120
@@ -127,17 +256,46 @@ explosion_immunity		= 0.0181 ;
 fire_wound_immunity		= 0.058 ;
 
 ;------------------------------ Pseudodoge --------------------------------------------------
-[hide_pseudodog2]:hide_pseudodog
-description				= st_hide_pseudodog2_descr
-inv_name				= st_hide_pseudodog2_name
-inv_name_short			= st_hide_pseudodog2_name
-inv_weight				= 0.911
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 3
-inv_grid_y				= 0
-bleeding_restore_speed	= 0.00009 ; 0.00048
-hit_absorbation_sect	= hide_pseudodog2_absorbation
-repair_part_bonus		= 0.15
+[hide_pseudodog2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_pseudodog.ogf
+description						= st_hide_pseudodog2_descr
+inv_name						= st_hide_pseudodog2_name
+inv_name_short					= st_hide_pseudodog2_name
+inv_weight						= 0.911
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 3
+inv_grid_y						= 0
+cost							= 940 ; 6200
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00009 ; 0.00048
+hit_absorbation_sect			= hide_pseudodog2_absorbation
+additional_inventory_weight		= 0.312
+additional_inventory_weight2	= 0.312
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.15
+tier							= 2
 
 [hide_pseudodog2_absorbation]:hide_pseudodog_absorbation
 burn_immunity			= 0.00038
@@ -148,16 +306,46 @@ chemical_burn_immunity	= 0.00001
 explosion_immunity		= 0.0140 ; 7 sheets of kevlar
 fire_wound_immunity		= 0.045 ; 7 sheets of kevlar
 
-[hide_pseudodog3]:hide_pseudodog2
-description				= st_hide_pseudodog3_descr
-inv_name				= st_hide_pseudodog3_name
-inv_name_short			= st_hide_pseudodog3_name
-inv_weight				= 1.111
-inv_grid_x				= 3
-inv_grid_y				= 1
-bleeding_restore_speed	= 0.00018
-hit_absorbation_sect	= hide_pseudodog3_absorbation
-repair_part_bonus		= 0.25
+[hide_pseudodog3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_pseudodog.ogf
+description						= st_hide_pseudodog3_descr
+inv_name						= st_hide_pseudodog3_name
+inv_name_short					= st_hide_pseudodog3_name
+inv_weight						= 1.111
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 3
+inv_grid_y						= 1
+cost							= 940 ; 6200
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00018
+hit_absorbation_sect			= hide_pseudodog3_absorbation
+additional_inventory_weight		= 0.312
+additional_inventory_weight2	= 0.312
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.25
+tier							= 2
 
 [hide_pseudodog3_absorbation]:hide_pseudodog2_absorbation
 burn_immunity			= 0.00048
@@ -167,17 +355,46 @@ explosion_immunity		= 0.035 ; 7 sheets of kevlar
 fire_wound_immunity		= 0.068 ; 7 sheets of kevlar
 
 ;------------------------------ PSYDOGE ------------------------------------------------
-[hide_psy_dog2]:hide_psy_dog
-description				= st_hide_psy_dog2_descr
-inv_name				= st_hide_psy_dog2_name
-inv_name_short			= st_hide_psy_dog2_name
-inv_weight				= 0.861
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 2
-inv_grid_y				= 0
-cost					= 21570 ; 6200
-bleeding_restore_speed	= 0.00018 ; 0.00064
-hit_absorbation_sect	= hide_psy_dog2_absorbation
+[hide_psy_dog2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_psy_dog.ogf
+description						= st_hide_psy_dog2_descr
+inv_name						= st_hide_psy_dog2_name
+inv_name_short					= st_hide_psy_dog2_name
+inv_weight						= 0.861
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 2
+inv_grid_y						= 0
+cost							= 21570 ; 6200
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00018 ; 0.00064
+hit_absorbation_sect			= hide_psy_dog2_absorbation
+additional_inventory_weight		= 0.367
+additional_inventory_weight2	= 0.367
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.06
+tier							= 3
 
 [hide_psy_dog2_absorbation]
 burn_immunity			= 0.00050
@@ -190,16 +407,46 @@ chemical_burn_immunity	= 0.00058
 explosion_immunity		= 0.025 ; 6 sheets of kevlar
 fire_wound_immunity		= 0.048 ; 6 sheets of kevlar
 
-[hide_psy_dog3]:hide_psy_dog2
-description				= st_hide_psy_dog3_descr
-inv_name				= st_hide_psy_dog3_name
-inv_name_short			= st_hide_psy_dog3_name
-inv_weight				= 1.261
-inv_grid_x				= 2
-inv_grid_y				= 1
-cost					= 51570
-hit_absorbation_sect	= hide_psy_dog3_absorbation
-repair_part_bonus		= 0.36
+[hide_psy_dog3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_psy_dog.ogf
+description						= st_hide_psy_dog3_descr
+inv_name						= st_hide_psy_dog3_name
+inv_name_short					= st_hide_psy_dog3_name
+inv_weight						= 1.261
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 2
+inv_grid_y						= 1
+cost							= 51570
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00018 ; 0.00064
+hit_absorbation_sect			= hide_psy_dog3_absorbation
+additional_inventory_weight		= 0.367
+additional_inventory_weight2	= 0.367
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.36
+tier							= 3
 
 [hide_psy_dog3_absorbation]
 burn_immunity			= 0.00060
@@ -213,17 +460,46 @@ explosion_immunity		= 0.035 ; 6 sheets of kevlar
 fire_wound_immunity		= 0.068 ; 6 sheets of kevlar
 
 ;--------------------- Burger ----------------------------------------------------------
-[hide_burer2]:hide_burer
-description				= st_hide_burer2_descr
-inv_name				= st_hide_burer2_name
-inv_name_short			= st_hide_burer2_name
-inv_weight				= 0.831
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 4
-inv_grid_y				= 0
-cost					= 22540 ; 6200
-hit_absorbation_sect	= hide_burer2_absorbation
-repair_part_bonus		= 0.23
+[hide_burer2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_burer.ogf
+description						= st_hide_burer2_descr
+inv_name						= st_hide_burer2_name
+inv_name_short					= st_hide_burer2_name
+inv_weight						= 0.831
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 4
+inv_grid_y						= 0
+cost							= 22540 ; 6200
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0 ; 0.00038
+hit_absorbation_sect			= hide_burer2_absorbation
+additional_inventory_weight		= 0.53
+additional_inventory_weight2	= 0.53
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.23
+tier							= 4
 
 [hide_burer2_absorbation]:hide_burer_absorbation
 burn_immunity			= 0.00064
@@ -235,16 +511,46 @@ chemical_burn_immunity	= 0.00103
 explosion_immunity		= 0.0121 ; 2.5 sheets of kevlar
 fire_wound_immunity		= 0.0397 ; 2.5 sheets of kevlar
 
-[hide_burer3]:hide_burer2
-description				= st_hide_burer3_descr
-inv_name				= st_hide_burer3_name
-inv_name_short			= st_hide_burer3_name
-inv_weight				= 1.231
-inv_grid_x				= 4
-inv_grid_y				= 1
-cost					= 52540
-hit_absorbation_sect	= hide_burer3_absorbation
-repair_part_bonus		= 0.53
+[hide_burer3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_burer.ogf
+description						= st_hide_burer3_descr
+inv_name						= st_hide_burer3_name
+inv_name_short					= st_hide_burer3_name
+inv_weight						= 1.231
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 4
+inv_grid_y						= 1
+cost							= 52540
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0 ; 0.00038
+hit_absorbation_sect			= hide_burer3_absorbation
+additional_inventory_weight		= 0.53
+additional_inventory_weight2	= 0.53
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.53
+tier							= 4
 
 [hide_burer3_absorbation]:hide_burer2_absorbation
 burn_immunity			= 0.00084
@@ -256,17 +562,46 @@ explosion_immunity		= 0.0171 ; 2.5 sheets of kevlar
 fire_wound_immunity		= 0.0557 ; 2.5 sheets of kevlar
 
 ;-------------------------- Controller -------------------------------------------------------
-[hide_controller2]:hide_controller
-description				= st_hide_controller2_descr
-inv_name				= st_hide_controller2_name
-inv_name_short			= st_hide_controller2_name
-inv_weight				= 0.861
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 5
-inv_grid_y				= 0
-cost					= 23040 ; 6200
-hit_absorbation_sect	= hide_controller2_absorbation
-repair_part_bonus		= 0.33
+[hide_controller2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_controller.ogf
+description						= st_hide_controller2_descr
+inv_name						= st_hide_controller2_name
+inv_name_short					= st_hide_controller2_name
+inv_weight						= 0.861
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 5
+inv_grid_y						= 0
+cost							= 23040 ; 6200
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0 ; 0.00033
+hit_absorbation_sect			= hide_controller2_absorbation
+additional_inventory_weight		= 0.42
+additional_inventory_weight2	= 0.42
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.33
+tier							= 5
 
 [hide_controller2_absorbation]:hide_controller_absorbation
 burn_immunity			= 0.00042
@@ -278,16 +613,46 @@ chemical_burn_immunity	= 0.001
 explosion_immunity		= 0.0101 ; 2.5 sheets of kevlar
 fire_wound_immunity		= 0.0377 ; 2.5 sheets of kevlar
 
-[hide_controller3]:hide_controller2
-description				= st_hide_controller3_descr
-inv_name				= st_hide_controller3_name
-inv_name_short			= st_hide_controller3_name
-inv_weight				= 1.361
-inv_grid_x				= 5
-inv_grid_y				= 1
-cost					= 53040
-hit_absorbation_sect	= hide_controller3_absorbation
-repair_part_bonus		= 0.53
+[hide_controller3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_controller.ogf
+description						= st_hide_controller3_descr
+inv_name						= st_hide_controller3_name
+inv_name_short					= st_hide_controller3_name
+inv_weight						= 1.361
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 5
+inv_grid_y						= 1
+cost							= 53040
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0 ; 0.00033
+hit_absorbation_sect			= hide_controller3_absorbation
+additional_inventory_weight		= 0.42
+additional_inventory_weight2	= 0.42
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.53
+tier							= 5
 
 [hide_controller3_absorbation]:hide_controller2_absorbation
 burn_immunity			= 0.00082
@@ -298,18 +663,46 @@ explosion_immunity		= 0.012 ; 2.5 sheets of kevlar
 fire_wound_immunity		= 0.0457 ; 2.5 sheets of kevlar
 
 ; ------------------------- SUCC ----------------------------------------------------------------------
-[hide_psysucker2]:hide_psysucker
-description				= st_hide_psysucker2_descr
-inv_name				= st_hide_psysucker2_name
-inv_name_short			= st_hide_psysucker2_name
-inv_weight				= 0.872
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 7
-inv_grid_y				= 0
-cost					= 22020
-bleeding_restore_speed	= 0.00018
-hit_absorbation_sect	= hide_psysucker2_absorbation
-repair_part_bonus		= 0.25
+[hide_psysucker2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_bloodsucker.ogf
+description						= st_hide_psysucker2_descr
+inv_name						= st_hide_psysucker2_name
+inv_name_short					= st_hide_psysucker2_name
+inv_weight						= 0.872
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 7
+inv_grid_y						= 0
+cost							= 22020
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00018
+hit_absorbation_sect			= hide_psysucker2_absorbation
+additional_inventory_weight		= 0.23
+additional_inventory_weight2	= 0.23
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.25
+tier							= 3
 
 [hide_psysucker2_absorbation]:hide_psysucker_absorbation
 burn_immunity			= 0
@@ -321,17 +714,46 @@ chemical_burn_immunity	= 0.00028
 explosion_immunity		= 0.0376 ; 4 sheets of kevlar
 fire_wound_immunity		= 0.0455 ; 4 sheets of kevlar
 
-[hide_psysucker3]:hide_psysucker2
-description				= st_hide_psysucker3_descr
-inv_name				= st_hide_psysucker3_name
-inv_name_short			= st_hide_psysucker3_name
-inv_weight				= 1.172
-inv_grid_x				= 7
-inv_grid_y				= 1
-cost					= 52020
-bleeding_restore_speed	= 0.00030 ; 0.00065
-hit_absorbation_sect	= hide_psysucker3_absorbation
-repair_part_bonus		= 0.55
+[hide_psysucker3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_bloodsucker.ogf
+description						= st_hide_psysucker3_descr
+inv_name						= st_hide_psysucker3_name
+inv_name_short					= st_hide_psysucker3_name
+inv_weight						= 1.172
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 7
+inv_grid_y						= 1
+cost							= 52020
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00030 ; 0.00065
+hit_absorbation_sect			= hide_psysucker3_absorbation
+additional_inventory_weight		= 0.23
+additional_inventory_weight2	= 0.23
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.55
+tier							= 3
 
 [hide_psysucker3_absorbation]:hide_psysucker2_absorbation
 shock_immunity			= 0.0346
@@ -342,20 +764,46 @@ chemical_burn_immunity	= 0.00040
 explosion_immunity		= 0.071 ; 4 sheets of kevlar
 fire_wound_immunity		= 0.0755 ; 4 sheets of kevlar
 
-[hide_bloodsucker2]:hide_bloodsucker
-description				= st_hide_bloodsucker2_descr
-inv_name				= st_hide_bloodsucker2_name
-inv_name_short			= st_hide_bloodsucker2_name
-inv_weight				= 0.872
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 6
-inv_grid_y				= 0
-cost					= 22020
-radiation_restore_speed	= -0.00005
-power_restore_speed		= 0.0007
-bleeding_restore_speed	= 0.00025
-hit_absorbation_sect	= hide_bloodsucker2_absorbation
-repair_part_bonus		= 0.34
+[hide_bloodsucker2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_bloodsucker.ogf
+description						= st_hide_bloodsucker2_descr
+inv_name						= st_hide_bloodsucker2_name
+inv_name_short					= st_hide_bloodsucker2_name
+inv_weight						= 0.872
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 6
+inv_grid_y						= 0
+cost							= 22020
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= -0.00005
+satiety_restore_speed			= 0
+power_restore_speed				= 0.0007
+bleeding_restore_speed			= 0.00025
+hit_absorbation_sect			= hide_bloodsucker2_absorbation
+additional_inventory_weight		= 0.36
+additional_inventory_weight2	= 0.36
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.34
+tier							= 3
 
 [hide_bloodsucker2_absorbation]:hide_bloodsucker_absorbation
 burn_immunity			= 0.0012
@@ -366,19 +814,46 @@ chemical_burn_immunity	= 0.00024
 explosion_immunity		= 0.0436 ; 4 sheets of kevlar
 fire_wound_immunity		= 0.0595 ; 4 sheets of kevlar
 
-[hide_bloodsucker3]:hide_bloodsucker2
-description				= st_hide_bloodsucker3_descr
-inv_name				= st_hide_bloodsucker3_name
-inv_name_short			= st_hide_bloodsucker3_name
-inv_weight				= 1.572
-inv_grid_x				= 6
-inv_grid_y				= 1
-cost					= 72020
-radiation_restore_speed	= -0.0001
-power_restore_speed		= 0.0014
-bleeding_restore_speed	= 0.0004
-hit_absorbation_sect	= hide_bloodsucker3_absorbation
-repair_part_bonus		= 0.54
+[hide_bloodsucker3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_bloodsucker.ogf
+description						= st_hide_bloodsucker3_descr
+inv_name						= st_hide_bloodsucker3_name
+inv_name_short					= st_hide_bloodsucker3_name
+inv_weight						= 1.572
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 6
+inv_grid_y						= 1
+cost							= 72020
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= -0.0001
+satiety_restore_speed			= 0
+power_restore_speed				= 0.0014
+bleeding_restore_speed			= 0.0004
+hit_absorbation_sect			= hide_bloodsucker3_absorbation
+additional_inventory_weight		= 0.36
+additional_inventory_weight2	= 0.36
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.54
+tier							= 3
 
 [hide_bloodsucker3_absorbation]:hide_bloodsucker2_absorbation
 burn_immunity			= 0.0024
@@ -391,18 +866,46 @@ explosion_immunity		= 0.11 ; 4 sheets of kevlar
 fire_wound_immunity		= 0.12 ; 4 sheets of kevlar
 
 ;------------------------------- lurked -----------------------------------------------------
-[hide_lurker2]:hide_lurker
-description				= st_hide_lurker2_descr
-inv_name				= st_hide_lurker2_name
-inv_name_short			= st_hide_lurker2_name
-inv_weight				= 0.852
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 8
-inv_grid_y				= 0
-cost					= 5730
-power_restore_speed		= 0.00005
-hit_absorbation_sect	= hide_lurker2_absorbation
-repair_part_bonus		= 0.33
+[hide_lurker2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_boar.ogf
+description						= st_hide_lurker2_descr
+inv_name						= st_hide_lurker2_name
+inv_name_short					= st_hide_lurker2_name
+inv_weight						= 0.852
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 8
+inv_grid_y						= 0
+cost							= 5730
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0.00005
+bleeding_restore_speed			= 0 ; 0.00065
+hit_absorbation_sect			= hide_lurker2_absorbation
+additional_inventory_weight		= 0.83
+additional_inventory_weight2	= 0.83
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.33
+tier							= 2
 
 [hide_lurker2_absorbation]:hide_lurker_absorbation
 burn_immunity			= 0
@@ -414,17 +917,46 @@ chemical_burn_immunity	= 0.0003
 explosion_immunity		= 0.042 ; 1.5 sheets of kevlar
 fire_wound_immunity		= 0.044 ; 1.5 sheets of kevlar
 
-[hide_lurker3]:hide_lurker2
-description				= st_hide_lurker3_descr
-inv_name				= st_hide_lurker3_name
-inv_name_short			= st_hide_lurker3_name
-inv_weight				= 1.552
-inv_grid_x				= 8
-inv_grid_y				= 1
-cost					= 35730
-power_restore_speed		= 0.00009
-hit_absorbation_sect	= hide_lurker3_absorbation
-repair_part_bonus		= 0.53
+[hide_lurker3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_boar.ogf
+description						= st_hide_lurker3_descr
+inv_name						= st_hide_lurker3_name
+inv_name_short					= st_hide_lurker3_name
+inv_weight						= 1.552
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 8
+inv_grid_y						= 1
+cost							= 35730
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0.00009
+bleeding_restore_speed			= 0 ; 0.00065
+hit_absorbation_sect			= hide_lurker3_absorbation
+additional_inventory_weight		= 0.83
+additional_inventory_weight2	= 0.83
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.53
+tier							= 2
 
 [hide_lurker3_absorbation]:hide_lurker2_absorbation
 strike_immunity			= 0.07
@@ -434,18 +966,46 @@ explosion_immunity		= 0.066 ; 1.5 sheets of kevlar
 fire_wound_immunity		= 0.077 ; 1.5 sheets of kevlar
 
 ;--------------------------------- Chimera ----------------------------------
-[hide_chimera2]:hide_chimera
-description				= st_hide_chimera2_descr
-inv_name				= st_hide_chimera2_name
-inv_name_short			= st_hide_chimera2_name
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 0
-inv_grid_y				= 0
-cost					= 53284 ; 6200
-power_restore_speed		= 0.00015
-bleeding_restore_speed	= 0.00030
-hit_absorbation_sect	= hide_chimera2_absorbation
-repair_part_bonus		= 0.47
+[hide_chimera2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_chimera.ogf
+description						= st_hide_chimera2_descr
+inv_name						= st_hide_chimera2_name
+inv_name_short					= st_hide_chimera2_name
+inv_weight						= 1.361
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 0
+inv_grid_y						= 0
+cost							= 53284 ; 6200
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0.00015
+bleeding_restore_speed			= 0.00030
+hit_absorbation_sect			= hide_chimera2_absorbation
+additional_inventory_weight		= 0.946
+additional_inventory_weight2	= 0.946
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.47
+tier							= 4
 
 [hide_chimera2_absorbation]
 burn_immunity			= 0.00091
@@ -458,18 +1018,46 @@ chemical_burn_immunity	= 0.00133
 explosion_immunity		= 0.094 ; 1.5 sheets of kevlar
 fire_wound_immunity		= 0.095 ; 1.5 sheets of kevlar
 
-[hide_chimera3]:hide_chimera2
-description				= st_hide_chimera3_descr
-inv_name				= st_hide_chimera3_name
-inv_name_short			= st_hide_chimera3_name
-inv_weight				= 2.361
-inv_grid_x				= 0
-inv_grid_y				= 1
-cost					= 153284
-power_restore_speed		= 0.00025
-bleeding_restore_speed	= 0.00060
-hit_absorbation_sect	= hide_chimera3_absorbation
-repair_part_bonus		= 0.99
+[hide_chimera3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_chimera.ogf
+description						= st_hide_chimera3_descr
+inv_name						= st_hide_chimera3_name
+inv_name_short					= st_hide_chimera3_name
+inv_weight						= 2.361
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 0
+inv_grid_y						= 1
+cost							= 153284
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0.00025
+bleeding_restore_speed			= 0.00060
+hit_absorbation_sect			= hide_chimera3_absorbation
+additional_inventory_weight		= 0.946
+additional_inventory_weight2	= 0.946
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.99
+tier							= 4
 
 [hide_chimera3_absorbation]
 burn_immunity			= 0.00201
@@ -483,17 +1071,46 @@ explosion_immunity		= 0.227 ; 1.5 sheets of kevlar
 fire_wound_immunity		= 0.285 ; 1.5 sheets of kevlar
 
 ;-------------------------------- Pseudogiant ---------------------------------------------------------
-[hide_pseudogiant2]:hide_pseudogiant
-description				= st_hide_pseudogiant2_descr
-inv_name				= st_hide_pseudogiant2_name
-inv_name_short			= st_hide_pseudogiant2_name
-icons_texture			= ui\ui_hsurv
-inv_grid_x				= 1
-inv_grid_y				= 0
-cost					= 44090
-bleeding_restore_speed	= 0.00025
-hit_absorbation_sect	= hide_pseudogiant2_absorbation
-repair_part_bonus		= 0.58
+[hide_pseudogiant2]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_pseudogiant.ogf
+description						= st_hide_pseudogiant2_descr
+inv_name						= st_hide_pseudogiant2_name
+inv_name_short					= st_hide_pseudogiant2_name
+inv_weight						= 2.192
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 1
+inv_grid_y						= 0
+cost							= 44090
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00025
+hit_absorbation_sect			= hide_pseudogiant2_absorbation
+additional_inventory_weight		= 1.022
+additional_inventory_weight2	= 1.022
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.58
+tier							= 5
 
 [hide_pseudogiant2_absorbation]:hide_pseudogiant_absorbation
 burn_immunity			= 0.00086
@@ -503,16 +1120,46 @@ chemical_burn_immunity	= 0.00093
 explosion_immunity		= 0.144 ; 10 sheets of kevlar
 fire_wound_immunity		= 0.105 ; 10 sheets of kevlar
 
-[hide_pseudogiant3]:hide_pseudogiant2
-description				= st_hide_pseudogiant3_descr
-inv_name				= st_hide_pseudogiant3_name
-inv_name_short			= st_hide_pseudogiant3_name
-inv_weight				= 3.192
-inv_grid_x				= 1
-inv_grid_y				= 1
-cost					= 144090
-hit_absorbation_sect	= hide_pseudogiant3_absorbation
-repair_part_bonus		= 0.99
+[hide_pseudogiant3]:af_base
+$spawn							= "artefacts\af_kevlar"
+class							= SCRPTART
+kind							= i_mutant_belt
+visual							= dynamics\repair\hide_pseudogiant.ogf
+description						= st_hide_pseudogiant3_descr
+inv_name						= st_hide_pseudogiant3_name
+inv_name_short					= st_hide_pseudogiant3_name
+inv_weight						= 3.192
+icons_texture					= ui\ui_hsurv
+inv_grid_width					= 1
+inv_grid_height					= 1
+inv_grid_x						= 1
+inv_grid_y						= 1
+cost							= 144090
+jump_height						= 0.0
+;particles						= artefact\af_thermal_idle
+det_show_particles				= artefact\af_thermal_show
+det_hide_particles				= artefact\af_thermal_hide
+particles_bone					= joint2
+af_rank							= 0
+lights_enabled					= false
+trail_light_color				= 0.9,0.4,0.2
+trail_light_range				= 2.0
+attach_angle_offset				= 1.922,1.551,-0.740
+attach_position_offset			= 0.15,0.002,0.25
+attach_bone_name				= bip01_r_hand
+auto_attach						= false
+;???????? ?????????? (??????????)
+health_restore_speed			= 0
+radiation_restore_speed			= 0
+satiety_restore_speed			= 0
+power_restore_speed				= 0
+bleeding_restore_speed			= 0.00025 ; 0.00094
+hit_absorbation_sect			= hide_pseudogiant3_absorbation
+additional_inventory_weight		= 1.022
+additional_inventory_weight2	= 1.022
+artefact_activation_seq			= af_activation_bold
+repair_part_bonus				= 0.99
+tier							= 5
 
 [hide_pseudogiant3_absorbation]:hide_pseudogiant2_absorbation
 burn_immunity			= 0.00106

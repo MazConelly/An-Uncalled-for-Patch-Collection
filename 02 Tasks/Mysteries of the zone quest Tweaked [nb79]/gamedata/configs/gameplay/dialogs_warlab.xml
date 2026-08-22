@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+    <dialog id="oso_osoznanie_start">
+        <phrase_list>
+            <phrase id="1">
+                <text>oso_no_0</text>
+                <action>dialogs_warlab.osoznanie_decline</action>
+            </phrase>
+			<phrase id="0">
+                <text></text>
+                <next>1</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+</game_dialogs>

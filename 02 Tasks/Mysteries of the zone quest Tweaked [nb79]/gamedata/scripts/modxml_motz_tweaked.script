@@ -1,0 +1,132 @@
+function on_game_start()
+    RegisterScriptCallback("on_specific_character_init", function(character_id, data)
+
+-- Barkeep
+        if character_id == "bar_visitors_barman_stalker_trader" then
+            local res = dialog_list:remove("barkeep_living_legend")
+            if res then
+                printf("Removing dialog %s for %s, pos %s", "barkeep_living_legend", character_id, res)
+            end
+        end
+
+-- Voronin
+        if character_id == "bar_dolg_leader" then
+
+            local removed_dialogs = {
+                "voronin_living_legend", "voronin_operation_afterglow_transmission_report"
+            }
+            for _, dlg in ipairs(removed_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated Voronin's dialog list")
+		end
+
+-- Dushman
+        if character_id == "cit_killers_merc_trader_stalker" then
+
+            local removed_dialogs = {
+                "dushman_living_legend", "dushman_operation_afterglow_transmission_report"
+            }
+            for _, dlg in ipairs(removed_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated Dushman's dialog list")
+		end
+
+-- Aslan
+        if character_id == "cit_killers_merc_barman_mlr" then
+            local res = dialog_list:remove("aslan_living_legend")
+            if res then
+                printf("Removing dialog %s for %s, pos %s", "aslan_living_legend", character_id, res)
+            end
+        end
+
+-- Sid
+        if character_id == "esc_2_12_stalker_trader" then
+
+            local removed_dialogs = {
+                "sidorovich_living_legend", "sidorovich_operation_afterglow_transmission_report"
+            }
+            for _, dlg in ipairs(removed_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated Sid's dialog list")
+		end
+		
+-- Doctor
+        if character_id == "mar_smart_terrain_doc_doctor" then
+
+            local res = dialog_list:add("cit_doctor_main_dialog")
+
+            if res then
+                printf("adding dialog %s for %s, pos %s", "cit_doctor_main_dialog", character_id, res)
+            end
+			
+            local removed_dialogs = {
+                "doctor_living_legend", "doctor_living_legend_strelok"
+            }
+            for _, dlg in ipairs(removed_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated Doctor's dialog list")
+		end
+
+-- Cold
+        if character_id == "mar_smart_terrain_base_stalker_leader_marsh" then
+
+            local removed_dialogs = {
+                "cold_living_legend", "cold_operation_afterglow_transmission_report"
+            }
+            for _, dlg in ipairs(removed_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated Cold's dialog list")
+		end
+		
+-- Lukash
+        if character_id == "mil_smart_terrain_7_7_freedom_leader_stalker" then
+
+            local removed_dialogs = {
+                "lukash_living_legend", "lukash_operation_afterglow_transmission_report"
+            }
+            for _, dlg in ipairs(removed_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated Lukash's dialog list")
+
+        end
+
+-- OSOZNANIE REPRESENTATIVE
+        if character_id == "osoznanie" then
+            local old_dialogs = {
+				"oso_osoznanie_start", "oso_who_are_you", "oso_what_is_the_zone", "oso_what_about_me", "oso_why_chernobyl", "oso_chernobyl_crush", "oso_stalker", "oso_death_truck", "oso_what_next", "oso_yes", "oso_no"
+            }
+            for _, dlg in ipairs(old_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated osoznanie's dialog list")
+        end
+
+-- Sakharov
+        if character_id == "yan_stalker_sakharov" then
+
+            local removed_dialogs = {
+                "sakharov_living_legend", "sakharov_operation_afterglow_transmission_report"
+            }
+            for _, dlg in ipairs(removed_dialogs) do
+                dialog_list:remove(dlg)
+            end
+            printf("DXML: Updated Sakharov's dialog list")
+
+        end
+
+-- Beard
+        if character_id == "zat_a2_stalker_barmen" then
+            local res = dialog_list:remove("beard_living_legend")
+            if res then
+                printf("Removing dialog %s for %s, pos %s", "beard_living_legend", character_id, res)
+            end
+        end
+
+    end)
+end
